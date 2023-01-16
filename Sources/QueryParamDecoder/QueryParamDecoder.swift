@@ -247,6 +247,62 @@ class QueryParamKeyedDecodingContainer<Key: CodingKey>: KeyedDecodingContainerPr
         return intValue
     }
 
+    func decodeIfPresent(_ type: String.Type, forKey key: Key) -> String? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Bool.Type, forKey key: Key) -> Bool? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Double.Type, forKey key: Key) -> Double? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Float.Type, forKey key: Key) -> Float? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Int.Type, forKey key: Key) -> Int? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Int8.Type, forKey key: Key) -> Int8? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Int16.Type, forKey key: Key) -> Int16? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Int32.Type, forKey key: Key) -> Int32? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: Int64.Type, forKey key: Key) -> Int64? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: UInt.Type, forKey key: Key) -> UInt? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: UInt8.Type, forKey key: Key) -> UInt8? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: UInt16.Type, forKey key: Key) -> UInt16? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: UInt32.Type, forKey key: Key) -> UInt32? {
+        try? decode(type, forKey: key)
+    }
+
+    func decodeIfPresent(_ type: UInt64.Type, forKey key: Key) -> UInt64? {
+        try? decode(type, forKey: key)
+    }
+
     func decodeIfPresent<T>(_ type: T.Type, forKey key: Key) throws -> T? where T : Decodable {
         return try? decode(type, forKey: key)
     }
